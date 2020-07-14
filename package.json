@@ -1,0 +1,32 @@
+{
+  "name": "arena_temporary",
+  "version": "1.0.0",
+  "description": "arena_temporary",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sogangCSmaster/arena_temporary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sogangCSmaster/arena_temporary/issues"
+  },
+  "homepage": "https://github.com/sogangCSmaster/arena_temporary#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-async-errors": "^3.1.1",
+    "express-mysql-session": "^2.1.4",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.27.0",
+    "mysql": "^2.18.1"
+  }
+}
