@@ -20,6 +20,7 @@ router.route("/datakey")
     })
     .post(async(req, res, next) => {
         var { datakey } = req.session;
+        console.log(req.body.datakey);
         if(!datakey){
             datakey = req.body.datakey;
         }
