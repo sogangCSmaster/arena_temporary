@@ -29,7 +29,7 @@ router.route("/datakey")
             axios.get(url)
                 .then((response) => {
                     var data = response.data;
-                    data = JSON.parse(data);
+                    console.warn(data);
                     var return_code = data.return_code;
 
                     if(return_code=="0000"){
