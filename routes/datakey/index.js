@@ -23,7 +23,8 @@ router.route("/datakey")
         if(!datakey){
             datakey = req.body.datakey;
         }
-        console.warn(req.session);
+        // console.warn(req.session);
+        console.warn(datakey);
         if(datakey){
             var url = "https://api.flexplatform.net//v1/reward_common.php?datakey="+datakey
             axios.get(url)
