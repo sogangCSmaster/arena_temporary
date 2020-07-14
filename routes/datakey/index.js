@@ -10,7 +10,6 @@ router.route("/datakey")
         var { datakey } = req.query;
         if(datakey){
             req.session.datakey = datakey;
-            console.warn(req.session);
             res.send(datakey);
             var sql = "INSERT IGNORE INTO arena (datakey, createdAt) VALUES (?, ?)";
             var now = moment().format('YYYY-MM-DD HH:mm:ss');
@@ -21,6 +20,10 @@ router.route("/datakey")
     })
     .post(async(req, res, next) => {
         var { datakey } = req.session;
+        if(!datakey){
+            datakey = req.body.datakey;
+        }
+        console.warn(req.session);
         if(datakey){
             var url = "https://api.flexplatform.net//v1/reward_common.php?datakey="+datakey
             axios.get(url)
